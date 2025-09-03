@@ -1,0 +1,50 @@
+﻿use AdventureWorks2022;
+--GO
+--select top 5 ProductID,Name,ListPrice
+--from Production.Product
+--order by ListPrice desc;
+--GO
+--select  top 10 Percent ProductID,Name,ListPrice
+--from Production.Product
+--order by ListPrice desc
+--go
+--select top 3 with ties ProductID,Name,ListPrice
+--from Production.Product
+--order by ListPrice desc
+--go
+--select top 3 name,ListPrice
+--from Production.Product
+--order by ListPrice desc
+--go
+--select top 3 with ties Name,Color,ListPrice
+--from Production.Product
+--order by ListPrice desc
+--go
+--select top 3 TotalDue,AccountNumber
+--from Sales.SalesOrderHeader
+--order by TotalDue ASC
+--go
+--select top 3 with ties TotalDue,AccountNumber
+--from Sales.SalesOrderHeader
+--order by TotalDue ASC
+--go
+--select ProductID , Name , ListPrice
+--from Production.Product
+--order by ProductID
+--offset 0 rows fetch Next 10 rows only;
+--go
+select ProductID,Name,ListPrice
+from Production.Product
+order by ProductID
+offset 0 rows fetch next 10 rows only
+--offset از چند ردیف اول عبور کن --> Skip
+--offset 0 rows از هیچ ردیفی رد نشو
+--offset 20 rows  از 21 ام شروع کن
+--Fetch الان چند ردیف بیار و همیشه همراه NEXT میاد
+--Next اندازه ای که عددش را دادم
+--ONLY فقط همین تعداد و بس
+select Name, ListPrice
+from Production.Product
+order by ListPrice desc
+--offset 0 rows fetch next 10 row with ties
+--OFFSET 0 ROWS FETCH NEXT 3 ROWS WITH TIES; این دستور کار نمی کند
