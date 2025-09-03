@@ -33,10 +33,10 @@
 --order by ProductID
 --offset 0 rows fetch Next 10 rows only;
 --go
-select ProductID,Name,ListPrice
-from Production.Product
-order by ProductID
-offset 0 rows fetch next 10 rows only
+--select ProductID,Name,ListPrice
+--from Production.Product
+--order by ProductID
+--offset 0 rows fetch next 10 rows only
 --offset از چند ردیف اول عبور کن --> Skip
 --offset 0 rows از هیچ ردیفی رد نشو
 --offset 20 rows  از 21 ام شروع کن
